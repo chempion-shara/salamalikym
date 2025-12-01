@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ежедневник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1 class="logo">Ежедневник</h1>
+            <p class="subtitle">Система управления задачами</p>
+        </header>
+        
+        <main>
+            <section class="task-form">
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle" class="form-label">Название задачи *</label>
+                        <input type="text" id="taskTitle" class="form-input" placeholder="Введите задачу..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDescription" class="form-label">Описание</label>
+                        <textarea id="taskDescription" class="form-input form-textarea" placeholder="Детали задачи (опционально)"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-full">
+                        <span>+ Создать задачу</span>
+                    </button>
+                </form>
+            </section>
+            
+            <section class="tasks-section">
+                <div class="section-header">
+                    <h2 class="section-title">Активные задачи</h2>
+                    <span class="tasks-count" id="tasksCount">0</span>
+                </div>
+                
+                <div class="tasks-list" id="tasksList">
+                    <div class="empty-state">
+                        <div class="empty-icon">⚡</div>
+                        <p class="empty-text">Нет активных задач</p>
+                        <p class="empty-subtext">Добавьте первую задачу чтобы начать работу</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
